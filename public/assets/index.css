@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    grid-area: cabecalho;
+}
+
+nav {
+    grid-area: navegacao;
+}
+
+main {
+    grid-area: conteudo;
+}
+
+footer {
+    grid-area: rodape;
+}
+body {
+    font-size: 40px;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 300px 1fr; /*cabeçalho duas colunas*/
+    /*navegação 100px |conteúdo 1fr |rodape 100px*/
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+        'cabecalho cabecalho'
+        'navegacao conteudo'
+        'rodape rodape';
+
+}
+@media(max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1fr 100px;
+        grid-template-areas: 'navegacao' 'conteudo' 'rodape';
+    }
+
+    header { display: none; }
+}
