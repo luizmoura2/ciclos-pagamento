@@ -19,9 +19,6 @@ import Row from '../common/layout/row'
 
 class Dashboard extends Component{
 
-    getSnapshotBeforeUpdate(){
-        //this.props.getSummary()
-    }
     componentWillMount(){
         this.props.getSummary()
     }
